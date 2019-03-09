@@ -15,5 +15,5 @@
 		<label>Alamat</label>
 		<textarea name="alamat" class="form-control"><?php echo(isset($data_pelanggan[0]->alamat)? $data_pelanggan[0]->alamat:''); ?></textarea>
 	</div>
-	<input type="text" name="idPelanggan" value="<?php echo(isset($data_pelanggan[0]->pelangganId)? $data_pelanggan[0]->pelangganId:''); ?>"><button type="submit" class="btn btn-primary">Proses Data</button>
+	<input type="hidden" name="idPelanggan" value="<?php echo(isset($data_pelanggan[0]->pelangganId)? $data_pelanggan[0]->pelangganId:''); ?>"><button type="submit" class="btn btn-primary">Proses Data</button>
 </form>

@@ -1,29 +1,27 @@
 <form action="<?php echo site_url("produk/submit"); ?>" method="POST">
 	<div class="form-group">
 		<label>Nama Produk</label>
-		<input type="text" name="nmProduk" class="form-control" placeholder="Nama Produk">
+		<input type="text" name="namaProduk" class="form-control" value="<?php echo(isset($data_produk[0]->namaProduk)? $data_produk[0]->namaProduk:''); ?>" placeholder="Nama Produk">
 	</div>
 	<div class="form-group">
 		<label>Harga</label>
-		<input type="number" name="harga" class="form-control" placeholder="Harga">
+		<input type="number" name="harga" class="form-control" value="<?php echo(isset($data_produk[0]->harga)? $data_produk[0]->harga:''); ?>" placeholder="Harga">
 	</div>
 	<div class="form-group">
 		<label>Satuan</label>
-		<input type="text" name="satuan" class="form-control" placeholder="Satuan">
+		<input type="text" name="satuan" class="form-control" value="<?php echo(isset($data_produk[0]->satuan)? $data_produk[0]->satuan:''); ?>" placeholder="Satuan">
 	</div>
 	<div class="form-group">
 		<label>Qty</label>
-		<input type="number" name="qty" class="form-control" placeholder="Qty">
+		<input type="number" name="qty" class="form-control" value="<?php echo(isset($data_produk[0]->qty)? $data_produk[0]->qty:''); ?>" placeholder="Qty">
 	</div>
 	<div class="form-group">
 		<label>Image</label>
-		<input type="text" name="img" class="form-control" placeholder="Image">
+		<input type="text" name="image" class="form-control" value="<?php echo(isset($data_produk[0]->image)? $data_produk[0]->image:''); ?>" placeholder="Image">
 	</div>
 	<div class="form-group">
 		<label>Deskripsi</label>
-		<textarea name="deskripsi" class="form-control"></textarea>
+		<textarea name="deskripsi" class="form-control"><?php echo(isset($data_produk[0]->deskripsi)? $data_produk[0]->deskripsi:''); ?></textarea>
 	</div>
-
-
-	<button type="submit" class="btn btn-primary">Proses Data</button>
+	<input type="hidden" name="idProduk" value="<?php echo(isset($data_produk[0]->produkId)? $data_produk[0]->produkId:''); ?>"><button type="submit" class="btn btn-primary">Proses Data</button>
 </form>
